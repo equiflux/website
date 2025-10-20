@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equiflux Protocol — Balance in Flux</title>
+  <meta name="description" content="Equiflux Protocol: The next-generation blockchain for privacy, fairness, and freedom. Stay Private, Stay Free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <a class="brand" href="/">
+        <img src="logo.png" alt="Equiflux logo" class="brand-icon h-6 w-6" width="24" height="24">
+        <span class="brand-text">EQUIFLUX</span>
+      </a>
+      <nav class="site-nav hidden md:flex items-center gap-5" aria-label="Primary navigation">
+        <a class="opacity-90 hover:text-cyan-300" href="#features">Features</a>
+        <a class="opacity-90 hover:text-cyan-300" href="#docs">Docs</a>
+        <a class="btn primary" href="#start">Get Started</a>
+      </nav>
+      <button class="menu-toggle md:hidden inline-flex items-center justify-center" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container px-4">
+        <img src="logo.png" alt="Equiflux logo" class="mx-auto mb-6 h-12 w-12 md:h-16 md:w-16" width="64" height="64">
+        <h1 class="title">Balance in Flux</h1>
+        <p class="subtitle">The next-generation blockchain for privacy, fairness, and freedom — Equiflux Protocol</p>
+        <div class="actions flex gap-3">
+          <a class="btn primary" href="#start">Get Started</a>
+          <a class="btn ghost" href="#docs">Read Whitepaper</a>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container grid grid-cols-1 md:grid-cols-3 gap-5 px-4">
+        <article class="card">
+          <h3>Privacy First</h3>
+          <p>Zero-knowledge and obfuscation by default, publicly verifiable.</p>
+        </article>
+        <article class="card">
+          <h3>Fair Launch</h3>
+          <p>No premine or private sale. Community-built with decentralized governance.</p>
+        </article>
+        <article class="card">
+          <h3>High Performance</h3>
+          <p>Parallel execution and modular design for throughput and low latency.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" id="start">
+      <div class="container px-4 text-center">
+        <h2>Join Equiflux</h2>
+        <p>Stay Private, Stay Free.</p>
+      </div>
+    </section>
+  </main>
+
+
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+
